@@ -7,6 +7,7 @@ import unittest
 
 
 class LoginTest(unittest.TestCase):
+    @classmethod
     def setUpClass(cls) -> None:
         cls.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
         cls.driver.implicitly_wait(3)
@@ -21,9 +22,7 @@ class LoginTest(unittest.TestCase):
         login.click_on_login_button()
         main_page.check_main_page()
         sleep(1)
-
-
+    @classmethod
     def tearDownClass(cls) -> None:
         cls.driver.close()
         cls.driver.quit()
-
