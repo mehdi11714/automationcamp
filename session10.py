@@ -12,9 +12,9 @@ driver.implicitly_wait(3)
 driver.maximize_window()
 driver.get("https://www.imdb.com/chart/top/")
 sleep(2)
-element = driver.find_element('link text', 'The Wizard of Oz')
-driver.execute_script("arguments[0].scrollIntoView();", element)
-sleep(2)
+# element = driver.find_element('link text', 'The Wizard of Oz')
+# driver.execute_script("arguments[0].scrollIntoView();", element)
+# sleep(2)
 
-def scroll_to_find_element(locator):
-    for i in range(10):
+driver.execute_script('window.scrollBy(0 , document.body.scrollHeight)')
+sleep(2)
