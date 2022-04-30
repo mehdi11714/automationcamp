@@ -22,6 +22,7 @@ class LoginTest(unittest.TestCase):
         login.click_on_login_button()
         main_page.check_main_page()
         sleep(1)
+
     @classmethod
     def tearDownClass(cls) -> None:
         cls.driver.close()
